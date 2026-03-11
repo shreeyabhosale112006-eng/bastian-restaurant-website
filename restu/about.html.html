@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #ffffff;
+  color: #e31b1b99;;
+}
+
+.container {
+  padding: 0 17px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: rgb(206, 155, 155);
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline;
+  padding: 8px;
+  color: rgb(255, 255, 255);
+  background-color:#4f0d0d;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #000000;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: flex;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="about-section">
+  <h1>About Us </h1>
+  <p>Welcome to Bastian, where culinary artistry meets heartfelt hospitality. Nestled in the heart of 
+    Pune, Bastian is more than just a dining destination—it's an experience that tantalizes your taste
+     buds and warms your soul.
+    </p>
+  <p>At Bastian, we believe in the magic of food and the stories it tells. Our menu is a harmonious
+     blend of traditional flavors and contemporary techniques, crafted with the finest ingredients and
+      a passion for perfection. Each dish is a testament to our commitment to quality, creativity, and 
+      sustainability.
+  </p>
+  <p>Our ambiance reflects the essence of Bastian: elegant yet cozy, sophisticated yet unpretentious. 
+    Whether you’re here for a romantic dinner, a family celebration, or a casual meal with friends, 
+    we strive to create memorable moments that linger long after the last bite.
+  </p>
+  <p>Our dedicated team, from our talented chefs to our attentive servers, is here to ensure that every 
+    visit to Bastian is a delightful journey. We take pride in our warm hospitality, personalized
+     service, and the genuine connections we build with our guests.
+    </p>
+<p>Join us at Bastian, where every meal is a celebration, and every guest is family. Discover the
+   flavors, the stories, and the joy of dining with us. Welcome to your new favorite place.
+</p>
+  
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="https://pbs.twimg.com/media/FmZf1SWagAAiGNg.jpg" alt="Sam" style="width: 100%;">
+      <div class="container">
+        <h2>Sam Doe</h2>
+        <p class="title">Owner and Founder</p>
+        <p>The mentor behind the brand is a Michelin-starred chef with over 22 years of 
+          experience in the hospitality business. </p>
+        <p>sam@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+        <img src="https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg" alt="Sam" style="width:100%;">
+      <div class="container">
+        <h2>Mike Ross</h2>
+        <p class="title">Senior Manager</p>
+        <p>Our backteam run amazing servies and are backbone of our resturant.As a Team,they make
+          sure every shift runs smoothly.
+        </p>
+        <p>mike@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+        <img src="https://pbs.twimg.com/media/FmSSw-maAAAaZ0g.jpg" alt="Sam" style="width: 100%;">
+      <div class="container">
+        <h2>John Doe</h2>
+        <p class="title">Manager</p>
+        <p>Our front team are the smiley faces of our resturants, making sure our bar
+          and dining areas set perfect scene for our guests.</p>
+        <p>john@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+        <img src="https://pbs.twimg.com/media/FmSgc2-aAAIXH80.jpg" alt="Sam" style="width: 100%;">
+      <div class="container">
+        <h2>Harry Madison</h2>
+        <p class="title">Chef</p>
+        <p>He is an impeccable chef with over experience creating world-class cuisines and
+          demonstartes leadership and team building.
+        </p>
+        <p>harry@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+        <img src="https://pbs.twimg.com/media/FmSSw-maAAAaZ0g.jpg" alt="Sam" style="width: 100%;">
+      <div class="container">
+        <h2>Cassie Jenner</h2>
+        <p class="title">Customer Care </p>
+        <p>He is avaiable 24/7 and ensures he connects the dots and helps customers 
+          to solve all the issues faced by our guests.</p>
+        <p>cassie@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+        <img src="https://pbs.twimg.com/media/FmZf1SWagAAiGNg.jpg" alt="Sam" style="width: 100%;">
+      <div class="container">
+        <h2>Maddy Hadid</h2>
+        <p class="title">Food Safety Auditor</p>
+        <p>The face of the company and an excellent audiotar available to provide servies.
+          Helped Starting a relationship towards success</p>
+        <p>maddy@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

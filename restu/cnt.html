@@ -1,0 +1,130 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restraunt</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- CONTACT SECTION DESIGN -->
+
+    <section class="contact" id="contact">
+      <h1 class="heading">Contact <span>Us</span></h1>
+    <div class="item" >
+      <form action="#">
+        
+        
+          <div class="input-box">
+              <input type="text" placeholder="Full Name">
+              <input type="email" placeholder="Email Address">
+          </div>
+          <div class="input-box">
+              <input type="number" placeholder="Mobile Number">
+              <input type="text" placeholder="Email Subject">
+          </div>
+          <div class="input-box">
+            <input type="number" placeholder="Number of People">
+          </div>
+          <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+           <input type="submit" value="Submit" class="btn">
+      </form>
+    </div>
+    <div class="social-media">
+      <a href="#"><i class="facebook"><img src="img/face.png" alt="" width="50px"></i></a>
+      <a href="#"><i class="twitter"><img src="img/twitter-bird-logo.png" alt="" width="50px"></i></a>
+      <a href="#"><i class="instagram"><img src="img/insta.webp" alt="" width="50px"></i></a>
+  </div>
+
+  </section>
+
+  </body>
+  <style>
+    :root {
+    --bg-color: #191f36;
+    --snd-bg-color: #262b40;
+    --text-color: #970606;
+    --main-color: #59b2f4;
+}
+
+html {
+    font-size: 70.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: #FFFFFF;
+    color: var(--text-color);
+}
+
+section {
+    min-height: 70vh;
+    padding: 2rem 9% 2rem;
+    font-size: 20px;
+}
+.contact h2 {
+    margin-bottom: 3rem;
+}
+
+.contact form {
+    max-width: 70rem;
+    margin: 20px;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--snd-bg-color);
+    border-radius: .8rem;
+    margin: .7rem 0;
+}
+
+.contact form .input-box input {
+    width: 49%;
+}
+
+.contact form textarea {
+    resize: none;    
+}
+
+.contact form .btn {
+    margin-top: 2rem;
+    cursor: pointer;
+    font-size: 30px;
+    text-shadow: white;
+    border-radius: 15px;
+    margin-right: 70rem;
+    transition: background-color 0.3s ease;
+}
+
+.contact form .btn:hover {
+  background-color: #970606;
+
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+}
+
+
+  </style>
+</html>

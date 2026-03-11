@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <!--font-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css ">
+    <!--<link rel="stylesheet" href="nav.css">-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root{
+    --maroon:#800000;
+    --black:#192a56;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.2);
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+.html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+}
+section{
+    padding: 10rem 9% 3rem;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+section :nth-child(even){
+    color: #eee;
+}
+.sub-heading{
+    text-align: center;
+    color: var(--maroon);
+    font-size: 2rem;
+    padding-top: 1rem;
+}
+.heading {
+    text-align: center;
+    text-shadow:2px 2px 10px #666;
+    font-size: 3rem;
+    padding-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+header{
+    position: fixed;
+    top: 0;left: 0;right: 0;
+    background: #fff;
+    padding: 1rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+}
+header .logo{
+    color: var(--black);
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+header .logo{
+    color: var(--maroon);   
+}
+header .navbar a{
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    color: var(--light-color);
+}
+
+header .navbar a.active,
+header .navbar a:hover{
+    color: #fff;
+    background: var(--maroon);
+}
+header .icons i{
+    cursor: pointer;
+    margin-left: .5rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    width: 4.5rem;
+    text-align: center;
+    font-size: 1.7rem;
+    color: var(--black);
+    border-radius: 50%;
+    background: #eee;
+}
+header .icons i:hover{
+    color: #fff;
+    background: var(--maroon);
+    transform: rotate(360deg);
+}
+header .icons #bars{
+    display: none;
+}
+.speciality .box img{
+    flex:1 1 45rem ;
+    width: 50%;
+    height: 37%;
+}
+.speciality .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(20rem,2fr));
+    gap: 1rem;
+}
+.speciality .box-container .box i {
+    font-size: 2rem;
+    color: var(--maroon);
+    padding: .9rem 0;
+  }
+.speciality .box-container .box{
+    padding: 2.5rem;
+    background: #fff;
+    border: .1rem solid rgba(0,0,0,.2);
+    box-shadow: var(#c5c5c5);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.speciality .box-container .box .spam{
+    color: #192a56;
+}
+.speciality .box-container .box .fa-heart,
+.speciality .box-container .box .fa-eye {
+    position: absolute;
+    top: 1.5rem;
+    background: #eee;
+    border-radius: 50%;
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color: var(--black);
+}
+.speciality .box-container .box h3{
+    font-size: 2.5rem;
+    color: black;
+    padding: .5rem 0;
+  }
+  .speciality .box-container .box spam {
+    font-size: 2rem;
+    color: var(--maroon);
+    padding: .5rem 0;
+  }
+.speciality .box-container .box .color{
+    font-size: 2rem;
+    color: #800000;
+}
+.speciality .box-container .box p {
+    font-size: 1rem;
+    color: #666;
+    padding-bottom: 1.5rem;
+}
+/*media queries*/
+
+@media(max-width:991px){
+    html{
+     font-size: 55%;
+    }  
+    header{
+        padding: 1rem 2rem;
+    }
+    section{
+     padding: 2rem;
+    }
+ }
+@media(max-width:768px){
+    header .icons #bars{
+        display: inline-block;
+    }
+    header .navbar{
+        position: absolute;
+        top: 100%;left:0;right: 0;
+        background: #fff;
+        border-top:.1rem solid rgba(0,0,0,.2);
+        border-bottom:.1rem solid rgba(0,0,0,.2);
+        padding: 1rem;
+        clip-path:polygon(0 0, 100% 0, 100% 0 , 0 0 );
+    }
+header .navbar.active{
+    clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+}
+
+header .navbar a{
+    display:block;
+    padding: 1.5rem;
+    margin: 1rem;
+    font-size: 2rem;
+    background: #eee;
+}
+@media(max-width:991px){
+    html{
+     font-size: 50%;
+    }  
+ }
+}
+    </style>
+</head>
+<body>
+    <!--header-->
+    <header>
+        <a   class="logo"><i class="fas fa-utensils"></i>.</a>
+        <!--Nav bar-->
+        
+        <nav class="navbar">
+            
+            <a href="#starter">starter</a>
+            
+            <a href="#maincourse">maincourse</a>
+            
+            <a href="#desert">dessert</a>
+        </nav>
+        <div class="icons">
+        <i class="fas fa-bars" id="bars"></i>
+        </div>    
+</header>
+<!--Starter-->
+<section class="speciality" id="starter">
+    <h3 class="sub-heading">Our Starter</h3>
+        <h1 class="heading">Our Popular</h1>
+        <!--First-->
+    <div class="box-container">
+        <div class="box">
+            <img src="https://www.twopeasandtheirpod.com/wp-content/uploads/2020/06/Watermelon-Feta-Salad-3-650x943.jpg" alt="">
+            <h1 class="color">Watermelon Feta</h1>
+            <div class="stars">
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+			</div>
+            <p>house greens, watermelon sherry vinaigrette, watermelon, muskmelon, blueberry. feta, walnut.</p>
+            <spam>₹550.99</spam>
+        </div>
+        <!--Second-->
+        <div class="box">
+            <img src="https://www.dontgobaconmyheart.co.uk/wp-content/uploads/2022/06/tomato-burrata-salad-1080x1080.jpg" alt="">
+            <h1 class="color">Burrata salad</h1>
+            <div class="stars">
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+			</div>
+            <p>miso bruleed burrata, roasted beets, beet ketchup, orange, almonds</p>
+            <spam>₹655.99</spam>
+        </div>
+        <!--Third-->
+        <div class="box">
+            <img src="https://choosingchia.com/jessh-jessh/uploads/2019/08/edamame-hummus-3.jpg" alt="">
+            <h1 class="color">Edamame Hummus</h1>
+            <div class="stars">
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+			</div>
+            <p>vegan cracker, truffle oil olive oil, edamame salad.</p>
+            <spam>₹650.99</spam>
+        </div>
+        <!--fourth-->
+        <div class="box">
+            <img src="https://www.walderwellness.com/wp-content/uploads/2022/10/Roasted-Pear-Salad-Walder-Wellness-5-768x1152.jpg" alt="">
+            <h1 class="color">Roasted Pear</h1>
+            <div class="stars">
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+			</div>
+            <p>house greens. blue cheese. candied nuts, honey mustard vinaigrette.</p>
+            <spam>₹540.99</spam>
+        </div>
+        <!--five-->
+        <div class="box">
+            <img src="https://images.immediate.co.uk/production/volatile/sites/2/2022/05/Italian-scotch-olives-e44e48b.jpg?quality=90&webp=true&resize=375,341" alt="">
+            <h1 class="color">Italian Scotch</h1>
+            <div class="stars">
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+			</div>
+            <p>Transport your tastebuds to the seaside with this classic whitebait recipe that's perfect for enjoying alfresco as part of a seafood spread. </p>
+            <spam>₹590.99</spam>
+        </div>
+        <!--six-->
+        <div class="box">
+            <img src="https://realfood.tesco.com/media/images/RFO-1400x919-PrawnCocktail-e1b7d9be-cc59-4f9d-a10e-dbf495ac6e2f-0-1400x919.jpg" alt="">
+            <h1 class="color">Prawn cocktail</h1>
+            <div class="stars">
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+			</div>
+            <p>Prawn cocktail is a retro classic that always stands the test of time.</p>
+            <spam>₹600.99</spam>
+        </div>
+       
+    </div>
+</section>
+<!--Main-->
+<section class="speciality" id="maincourse">
+        <h3 class="sub-heading">Our Main Course</h3>
+        <h1 class="heading">Our Popular</h1>
+        <!--First-->
+    <div class="box-container">
+        <div class="box">
+
+            <img src="https://acmesmokedfish.com/cdn/shop/articles/smoked-salmon-avocado-toast-square-thumbnail.webp?v=1670006777" alt="">
+            <h1 class="color">Avocado toast</h1>
+            <div class="stars">
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+			</div>
+            <p>basil pesto, avocado mousse. sliced avocado, heirloom tomatoes. mixed herbs, balsamic. add burrata 2251 egg.200</p>
+            <spam>₹770.99</spam>
+        </div>
+        <!--second-->
+        <div class="box">
+
+            <img src="https://www.kitchensanctuary.com/wp-content/uploads/2019/08/Korean-Fried-Chicken-tall-FS-New-7374.webp" alt="">
+            <h1 class="color">Korean Fried Chicken</h1>
+            <div class="stars">
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+			</div>
+            <p>sesame soy glaze, melted mozzarella. scallions, sesame seeds</p>
+            <spam>₹990.99</spam>
+        </div>
+        <!--third-->
+        <div class="box">
+
+            <img src="https://assets.epicurious.com/photos/60ba3e2749076eeb52dfae3d/1:1/w_1920%2Cc_limit/PotatoFlakeGnocchi_RECIPE_060221_17008.jpg" alt="">
+            <h1 class="color">QuickPotato Gnocchi</h1>
+            <div class="stars">
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+			</div>
+            <p>Impress your friends with homemade gnocchi, then let them in on the secret.</p>
+            <spam>₹1000.99</spam>
+        </div>
+        <!--four-->
+        <div class="box">
+
+            <img src="https://assets.epicurious.com/photos/5a3002b504847a34b821cb4a/1:1/w_800%2Cc_limit/seared-scallops-with-brown-butter-and-lemon-pan-sauce-recipe-BA-121217.jpg" alt="">
+            <h1 class="color">Seared Scallops</h1>
+            <div class="stars">
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+			</div>
+            <p>Scallops are always a stunner, but these are dead simple to make: Juice lemons. Spoon out capers. Heat pan. Cook scallops. Make sauce in same pan. Serve.</p>
+            <spam>₹999.99</spam>
+        </div>
+        <!--five-->
+        <div class="box">
+
+            <img src="https://assets.epicurious.com/photos/5f737a125a7e264184aab1b4/1:1/w_800%2Cc_limit/ChickenGrapesFennel_HEROv2_12175.jpg" alt="">
+            <h1 class="color">Braised Chicken</h1>
+            <div class="stars">
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+			</div>
+            <p>There's nothing wrong with defaulting to chicken when you're trying to think of dinner party ideas. The key is to select a truly special chicken recipe</p>
+            <spam>₹1100.99</spam>
+        </div>
+        <!--sixth-->
+        <div class="box">
+
+            <img src="https://assets.epicurious.com/photos/5b770caff1ff6a661bb16346/1:1/w_800%2Cc_limit/Should-I-Be-Using-Grilling-Planks-2-16082018.jpg" alt="">
+            <h1 class="color">Cedar Salmon</h1>
+            <div class="stars">
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+			</div>
+            <p>A big salmon fillet always feels like a festive main course, especially when it's cooked on a cedar grilling plank, so it picks up a whisper of smoky flavor.</p>
+            <spam>₹990.99</spam>
+        </div>
+         
+    </div>
+</section>
+<!--Dessert-->
+<section class="speciality" id="desert">
+        <h3 class="sub-heading">Our dessert</h3>
+        <h1 class="heading">Our Popular</h1>
+        <!--First-->
+    <div class="box-container">
+        <div class="box">
+            <img src="https://bakingamoment.com/wp-content/uploads/2016/08/9891featured.jpg" alt="">
+            <h1 class="color">Chocolate Mount Blanc</h1>
+            <div class="stars">
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+			</div>
+            <p>chocolate almond cookie. vanilla ice cream.chocolate cake. butterscotch ice cream. hazelnut mousse.</p>
+            <spam>₹540.99</spam>
+
+        </div>
+        <!--Second-->
+        <div class="box">
+            <img src="https://pics.craiyon.com/2023-06-27/7d8a5e413d50472381469e07d1e2ffb1.webp" alt="">
+            <h1 class="color">Emperor's Morsel</h1>
+            <div class="stars">
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+			</div>
+            <p>french toast rasmalai. pistachio rocks. yuzu ice cream, pistachio chikki. molten kulfi.</p>
+            <spam>₹760.99</spam>
+        </div>
+        <!--Third-->
+        <div class="box">
+            <img src="https://i0.wp.com/passionateaboutbaking.com/foodpicturesPAB/2013/03/Irish-Creme-Chocolate-Cakes-with-an-Irish-Creme-Caramel-Sauce.jpg?ssl=1" alt="">
+            <h1 class="color">Break-me-up</h1>
+            <div class="stars">
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+			</div>
+            <p>chocolate sponge. salted caramel mousse. chocolate irish cream glaze.chocolate crumble.</p>
+            <spam>₹60.99</spam>
+        </div>
+        <!--forth-->
+        <div class="box">
+            <img src="https://images.squarespace-cdn.com/content/v1/568e8fe6b204d5cbecd5c77e/1605816786174-WDH95G3KHCQIQ7HGJRGY/baked+alaska_blog-3048-2.jpg?format=1500w" alt="">
+            <h1 class="color">Fireball brownie</h1>
+            <div class="stars">
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+			</div>
+            <p>warm chocolate brownie, almond praline. vanilla ice cream. rum. seasonal fruits</p>
+            <spam>₹880.99</spam>
+        </div>
+        <!--five-->
+        <div class="box">
+            <img src="https://www.tasteofhome.com/wp-content/uploads/2018/01/Coconut-Pistachio-Pie_EXPS_FT22_31851_F_0419_1.jpg?fit=700%2C1024" alt="">
+            <h1 class="color">Coconut PistachioPie</h1>
+            <div class="stars">
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+			</div>
+            <p>1 piece: 365 calories, 21g fat (16g saturated fat), 25mg cholesterol, 513mg sodium, 41g carbohydrate (35g sugars, 1g fiber), 3g protein.</p>
+            <spam>₹910.99</spam>
+        </div>
+        <!--six-->
+        <div class="box">
+            <img src="https://www.liquor.com/thmb/PuH5KlMynDdaW1peG804tmSMKBo=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/march_cocktails_Irish-Affogato-720x720-220ef7414a45403290b53439364a0cdc.jpeg" alt="">
+            <h1 class="color">Irish CremeChocolate</h1>
+            <div class="stars">
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+			</div>
+            <p>An Irish Coffee is a classic after-dinner drink, and this twist doubles as dessert.</p>
+            <spam>₹900.99</spam>
+        </div>
+         
+    </div>
+    <a href="file:///C:/Users/Lenovo/AppData/Local/Temp/30b18fec-3ef5-4eb3-b453-02c640f8dee6_menu.zip.ee6/menu.pdf">link text</a>
+</section>
+    <script>
+    let menu = document.querySelector('#bars');
+    let navbar = document.querySelector('.navbar');
+</script>
+</body>
+</html>

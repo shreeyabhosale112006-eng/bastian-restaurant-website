@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Join Our Team</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    body {
+      overflow-x: hidden;
+      background: white;
+      color: rgb(252, 9, 61);
+    }
+    h1 {
+      color: #007bff ;
+    }
+    .form-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #e6e3e3;
+      padding: 20px;
+      border-radius: 20px;
+      width: calc(100vw - 65vw);
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <div class="container mt-2">
+      <div class="row justify-content-center">
+        <form name="myform" onsubmit="return validateForm()">
+          <h1>Registration Form</h1>
+
+          <!-- Personal Information -->
+          <div class="mb-2">
+            <label for="u_name">Full Name</label>
+            <input type="text" class="form-control" id="u_name" name="u_name" maxlength="50" required autocomplete="on">
+            <small class="text-danger" id="name-validation"></small>
+          </div>
+          <div class="form-group">
+            <label for="u_email">Email Address</label>
+            <input type="email" class="form-control" id="u_email" name="u_email" maxlength="50" required autocomplete="on">
+            <small class="text-danger" id="email-validation"></small>
+          </div>
+          <div class="form-group">
+            <label for="u_num">Phone Number</label>
+            <input type="number" class="form-control" id="u_num" name="u_num" maxlength="15" required autocomplete="on">
+            <small class="text-danger" id="num-validation"></small>
+          </div>
+
+          <!-- Position Desired -->
+          <div class="form-group">
+            <label for="position">Position Desired</label>
+            <input type="text" class="form-control" id="position" name="position" maxlength="50" required>
+          </div>
+
+          <!-- Availability -->
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="age">Age </label>
+              <input type="number" class="form-control" id="age" name="age" maxlength="50" required>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="startDate">When Can You Start?</label>
+              <input type="date" class="form-control" id="startDate" name="startDate" required>
+            </div>
+          </div>
+
+          <!-- Additional Comments -->
+          <div class="form-group">
+            <label for="comments">Additional Comments</label>
+            <textarea class="form-control" id="comments" name="comments" rows="4" maxlength="500"></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-primary">Submit Application</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Custom JS for validation -->
+  <script>
+    function validateForm() {
+      let isValid = true;
+
+      // Validate Full Name
+      var namePattern = /^[A-Za-z\s]+$/;
+      var u_name = document.getElementById("u_name");
+      if (u_name.value.trim() && namePattern.test(u_name.value.trim())) {
+        u_name.classList.remove("is-invalid");
+        u_name.classList.add("is-valid");
+        document.getElementById("name-validation").innerText = "";
+      } else {
+        u_name.classList.remove("is-valid");
+        u_name.classList.add("is-invalid");
+        document.getElementById("name-validation").innerText = "Please enter a valid name (letters and spaces only)";
+        isValid = false;
+      }
+
+      // Validate Email
+      var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      var u_email = document.getElementById("u_email");
+      if (u_email.value.trim() && emailPattern.test(u_email.value.trim())) {
+        u_email.classList.remove("is-invalid");
+        u_email.classList.add("is-valid");
+        document.getElementById("email-validation").innerText = "";
+      } else {
+        u_email.classList.remove("is-valid");
+        u_email.classList.add("is-invalid");
+        document.getElementById("email-validation").innerText = "Please enter a valid email address";
+        isValid = false;
+      }
+
+      // Validate Phone Number
+      var u_num = document.getElementById("u_num");
+      if (u_num.value.trim() && u_num.value.trim().length >= 10) {
+        u_num.classList.remove("is-invalid");
+        u_num.classList.add("is-valid");
+        document.getElementById("num-validation").innerText = "";
+      } else {
+        u_num.classList.remove("is-valid");
+        u_num.classList.add("is-invalid");
+        document.getElementById("num-validation").innerText = "Please enter a valid phone number";
+        isValid = false;
+      }
+
+      // If the form is valid, submit it
+      if (isValid) {
+        alert('Form submitted successfully!');
+        return true; // Submit the form
+      } else {
+        return false; // Prevent form submission
+      }
+    }
+  </script>
+</body>
+</html>

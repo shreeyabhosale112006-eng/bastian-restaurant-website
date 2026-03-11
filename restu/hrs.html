@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Hours & Location</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="hours-location">
+            <h1>Our Hours & Location</h1>
+            <div class="hours">
+                <h2>Hours</h2>
+                <ul>
+                    <li>Monday: 11:00 AM - 10:00 PM</li>
+                    <li>Tuesday: 11:00 AM - 10:00 PM</li>
+                    <li>Wednesday: 11:00 AM - 10:00 PM</li>
+                    <li>Thursday: 11:00 AM - 10:00 PM</li>
+                    <li>Friday: 11:00 AM - 11:00 PM</li>
+                    <li>Saturday: 12:00 PM - 11:00 PM</li>
+                    <li>Sunday: 12:00 PM - 9:00 PM</li>
+                </ul>
+            </div>
+            <div class="location">
+                <h2>Location</h2>
+                <p>123 Main Street, Cityville, ST 12345</p>
+                <img src="img/rest.webp" alt="" height="350" width="400">
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.645326727894!2d73.89870131436747!3d18.536069974957716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c17d3650736f%3A0x4dd1168f2a616fe3!2sKoregaon%20Park%2C%20Pune%2C%20Maharashtra%20411001!5e0!3m2!1sen!2sin!4v1625138562427!5m2!1sen!2sin"
+                        width="600"
+                        height="450"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy">                          
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: maroon;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.hours-location {
+    background-color: white;
+    border: 2px solid maroon;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hours-location h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.hours, .location {
+    margin: 20px 0;
+}
+
+.hours h2, .location h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.hours ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.hours li {
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+
+.location p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.location img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid maroon;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.map-container {
+    display: flex;
+    justify-content: center;
+}
+
+.map-container iframe {
+    width: 80%;
+    height: 450px;
+    border: 2px solid maroon;
+    border-radius: 8px;
+}
+    </style>
+</body>
+</html>
